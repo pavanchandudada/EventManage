@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --ug-accent: #1e3a8a;
+  --ug-accent-hover: #172e6e;
+  --ug-accent-soft: #1e3a8a18;
+  --ug-secondary: #b45309;
+  --ug-font-display: 'Fraunces', Georgia, serif;
+  --ug-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --ug-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --ug-radius-card: 12px;
+  --ug-radius-control: 8px;
+}
+
+@layer base {
+  html {
+    font-family: var(--ug-font-body);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-[#F8F9FA] text-slate-900 dark:bg-[#0B0F17] dark:text-slate-100;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--ug-font-display);
+  }
+
+  .font-mono-num {
+    font-family: var(--ug-font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.ug-card-radius {
+  border-radius: var(--ug-radius-card);
+}
+
+.ug-control-radius {
+  border-radius: var(--ug-radius-control);
+}
+
+.ug-accent-bg {
+  background-color: var(--ug-accent);
+}
+
+.ug-accent-bg:hover {
+  background-color: var(--ug-accent-hover);
+}
+
+.ug-accent-text {
+  color: var(--ug-accent);
+}
+
+.ug-accent-soft-bg {
+  background-color: var(--ug-accent-soft);
+}
+
+.ug-accent-border {
+  border-color: var(--ug-accent);
+}
+
+.ug-accent-ring:focus-visible {
+  outline: 2px solid var(--ug-accent);
+  outline-offset: 2px;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

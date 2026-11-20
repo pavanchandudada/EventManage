@@ -1,0 +1,8 @@
+{
+  "name": "UtsavGrid",
+  "description": "Local event management aggregator for India with real-time availability tracking, 10-minute slot holds, Razorpay/UPI booking, vendor portal, and live frontend customization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

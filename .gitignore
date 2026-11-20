@@ -1,0 +1,22 @@
+# Dependencies & builds
+node_modules/
+dist/
+dev-dist/
+.vite/
+*.tsbuildinfo
+
+# Local runtime data & environment secrets
+data/
+.env
+.env.local
+.env.*.local
+
+# Native Capacitor builds
+android/
+ios/
+
+# IDE & OS
+.DS_Store
+.vscode/
+.idea/
+.playwright-cli/
